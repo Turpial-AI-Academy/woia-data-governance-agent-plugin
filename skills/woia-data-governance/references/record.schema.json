@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "org_id",
+    "scope",
+    "writer",
+    "source_ref",
+    "version",
+    "effective_from",
+    "effective_until",
+    "fresh_until",
+    "conflict"
+  ],
+  "properties": {
+    "org_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "writer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "effective_from": {
+      "type": "string",
+      "minLength": 1
+    },
+    "effective_until": {
+      "type": "string",
+      "minLength": 1
+    },
+    "fresh_until": {
+      "type": "string",
+      "minLength": 1
+    },
+    "conflict": {
+      "type": "boolean"
+    }
+  }
+}

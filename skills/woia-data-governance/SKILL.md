@@ -1,55 +1,27 @@
 ---
 name: woia-data-governance
-description: Shared woia-data-governance capability under accepted source and authority contracts.
+description: Use for Generic source, normalization, quality and migration review without becoming a business fact writer.
 license: MIT
 ---
 
 # woia-data-governance
 
-## Operating flow
+## Scope and dispatch
 
-~~~text
-DISCOVER -> DECIDE -> IMPLEMENT -> VALIDATE -> REPORT
-~~~
+Generic source, normalization, quality and migration review without becoming a business fact writer. This is a shared provider, not an orchestrator. Resolve the caller's organization, current actor/task scope and accepted source contract before reading or mutating. Technical access is not authority. Missing binding, permission or source is an owned blocker.
 
-## Purpose
+Load [the action contract](references/action-contract.json) for every operation; load [the accepted provider contract](references/provider-contract.md) when assigning ownership or deciding whether an operation is allowed. Only the listed actions belong here. Current source policy, revocation, hold and exact-resource conditions must be enforced by the storage/adapter at actual dispatch; these local helpers do not prove runtime enforcement.
 
-Provide bounded woia-data-governance contracts and deterministic local validation without unqualified external effects.
+For business data or consequential effects load [the domain/source contract](references/domain-source-contract.md) and [the final authority contract](references/authority-contract.md). Preserve Evidence, Inference and accepted Fact separately. Do not infer organization rules, legal validity or money/permissions from documents or training. Do not send external notifications: Customer Service through Communications owns external-person contact, including embedded file/signature notifications.
 
-## Minimum sufficient evidence
+## Local execution
 
-Use a bounded path when an authoritative existing artifact/evidence set is healthy and the requested change is local and understood:
+Run deterministic helpers under `scripts/` only on explicitly supplied synthetic or authorized inputs. They return reviewed data or validation results; no backend, credentials or live effect is selected. Adapter/backend qualification is NOT_RUN and no external adapter is advertised. Never interpret local PASS as operator E2E or Production Ready.
 
-1. identify the artifact/evidence, source candidate, and affected surface;
-2. load only supporting context and references needed for that surface;
-3. amend or re-evaluate the smallest coherent unit;
-4. verify affected behavior plus mandatory cross-cutting invariants;
-5. preserve unrelated valid artifacts/evidence and report what changed.
+## Reconcile and report
 
-Use the deep path for a new artifact, unclear scope or contradictory evidence, public API/event/schema changes, persisted data/migrations, authentication/authorization/secrets/signing/trust boundaries, deployment/rollback/availability risk, cross-provider dependency restructuring, unhealthy or unfamiliar conventions, missing durable required evidence, or a failed invariant that invalidates reused evidence. Load the references/checklists needed by those triggers and retain all required safety validation.
+Retain stable operation/source IDs, exact version and evidence. Unknown remote effects require reconciliation before retry; cancellation/restore does not undo external effects. Report accepted source, tested scope, blockers and NOT_RUN adapter/operator gates. Domain owners accept business facts; this provider never silently promotes model output.
 
-## Discover
+## Normalization review
 
-Inspect actual repository/system state before changing it. Locate authoritative artifacts/evidence and identify affected standards, constraints, supported platforms, integrations, and user requirements. Expand context when a dependency, uncertainty, or deep-path trigger requires it.
-
-## Decide
-
-Select the smallest strategy that satisfies the capability. Preserve healthy existing standards. Do not infer policy from the author's workspace.
-
-## Implement
-
-Apply only authorized changes. Keep domain semantics independent from unrelated tooling.
-
-## Validate
-
-Run capability-appropriate checks and verify changed state. Reuse evidence only when it is durable, inspectable evidence of actual execution/observation with an identifiable candidate, checked surface, relevant inputs/environment, and outcome. Independently establish that it satisfies the gate being owned; prose claims or recollection are not execution evidence.
-
-A later mutation invalidates the checks whose coverage or inputs it affects. Rerun those checks and mandatory related invariants; preserve unaffected valid evidence. Reuse expensive runtime verification across an unchanged candidate and relevant environment. A new turn/session alone does not invalidate evidence. Execute or observe relevant checks when required evidence cannot be inspected or established. Skipped/unavailable checks are not PASS.
-
-## Report
-
-Report current state, source candidate, affected surface, decisions, changes, and exact usage/maintenance commands. Distinguish reusable evidence, invalidated evidence, freshly established evidence, and assumptions/inferences that are not evidence. Include remaining risks and uncertainties.
-
-## Detailed references
-
-Add focused files under `references/` only when more detail is needed and give each reference a concrete scope/risk/ambiguity load trigger. Load triggered safety references; a bounded amendment does not require every reference or full template replay. Add scripts/assets only when they materially improve deterministic execution.
+For schema, normalization, security or migration review load [the generic method](references/normalization-method.md) and [the review template](references/review-template.json). Enumerate actual attributes, every candidate key, FDs/MVDs/JDs, lossless decomposition and dependency preservation proofs. Do not accept a UUID, ORM, sample rows or empty dependency arrays as proof. Local helper validates supplied proof completeness; competent review and physical enforcement remain separate.
