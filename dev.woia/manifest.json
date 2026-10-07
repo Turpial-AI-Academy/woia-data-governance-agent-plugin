@@ -1,0 +1,29 @@
+{
+  "schema": "dev.woia.provider-manifest/v1",
+  "name": "woia-data-governance",
+  "version": "0.5.0",
+  "origin": "native",
+  "authoring_profile": "thin",
+  "actions": [
+    "data.contract.resolve",
+    "data.contract.review",
+    "data.normalization.review",
+    "data.schema.review",
+    "data.quality.evaluate",
+    "data.quality.observe",
+    "data.freshness.observe",
+    "data.lineage.trace",
+    "data.source-map.read",
+    "data.source-map.update",
+    "data.migration.plan",
+    "data.migration.reconcile",
+    "data.reconciliation.status",
+    "data.integrity.issue.record",
+    "data.integrity.issue.resolve"
+  ],
+  "support": {
+    "external_adapters": [],
+    "operator_e2e": "NOT_RUN",
+    "production_ready": false
+  }
+}

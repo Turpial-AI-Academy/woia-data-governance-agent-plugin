@@ -1,0 +1,14 @@
+{
+  "fact_grain": null,
+  "attributes": [],
+  "candidate_keys": [],
+  "functional_dependencies": [],
+  "multivalued_dependencies": [],
+  "join_dependencies": [],
+  "source_authority": null,
+  "proof_evidence_refs": [],
+  "lossless_decomposition_proof": null,
+  "dependency_preservation_proof": null,
+  "security_isolation_evidence": null,
+  "physical_enforcement": "NOT_RUN"
+}

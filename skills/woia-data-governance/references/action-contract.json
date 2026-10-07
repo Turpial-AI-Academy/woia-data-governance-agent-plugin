@@ -1,0 +1,25 @@
+{
+  "schema": "dev.woia.action-contract/v1",
+  "plugin": "woia-data-governance",
+  "version": "0.5.0",
+  "actions": [
+    "data.contract.resolve",
+    "data.contract.review",
+    "data.normalization.review",
+    "data.schema.review",
+    "data.quality.evaluate",
+    "data.quality.observe",
+    "data.freshness.observe",
+    "data.lineage.trace",
+    "data.source-map.read",
+    "data.source-map.update",
+    "data.migration.plan",
+    "data.migration.reconcile",
+    "data.reconciliation.status",
+    "data.integrity.issue.record",
+    "data.integrity.issue.resolve"
+  ],
+  "source_commit": "eb0a7278188b2f9968e21ed4299f08184d864cac",
+  "organization_values": "REQUIRED_WHERE_APPLICABLE_NO_DEFAULTS",
+  "effects": "NONE_IN_LOCAL_HELPERS"
+}
