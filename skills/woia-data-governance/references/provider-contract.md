@@ -23,4 +23,3 @@ Source: Turpial-AI-Academy/woia-real-estate @ eb0a7278188b2f9968e21ed4299f08184d
 **Resources:** generic Data method, 1NF–5NF/BCNF review templates, security/integrity/quality/migration evaluations. Organization values live in private versioned resources; Real Estate semantics live in `woia-re-domain-contracts`.
 
 **Boundary:** no universal backend, no routine-read proxy, no authority to accept Finance/Legal/business facts.
-
