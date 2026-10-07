@@ -232,4 +232,3 @@ Una réplica no reemplaza la estrategia de respaldo. La copia debe poder recuper
 La aceptación requiere un ejercicio de restauración aislado y verificable. Se comprueban identidades, relaciones, restricciones, importes, documentos, versiones y permisos. Las revocaciones vigentes y los efectos externos se concilian antes de reactivar ejecución. Un respaldo creado correctamente no demuestra que esa recuperación haya funcionado. [W9]
 
 Si varias organizaciones comparten infraestructura, recuperar datos de una no debe exponer o sobrescribir los de otra. El mecanismo de recuperación selectiva, cuando sea necesario, debe diseñarse y probarse con ese límite.
-

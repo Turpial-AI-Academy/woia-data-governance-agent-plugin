@@ -129,4 +129,3 @@ Authority control data is separated from B3 canonical business facts:
 - approval/evidence references are linked into Effect/domain records.
 
 Therefore Authority/Finance reconciliation creates **no new plugin/repository identity** before B5.
-

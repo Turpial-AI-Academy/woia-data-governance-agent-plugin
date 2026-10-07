@@ -42,4 +42,3 @@ No unlimited bidirectional last-write-wins synchronization is supported.
 - Restore re-evaluates current revocations/holds before dispatch resumes.
 
 Physical RLS/schema-per-tenant/database-per-tenant choice remains Technology/Software implementation after B4/B5; it must satisfy this logical contract.
-
