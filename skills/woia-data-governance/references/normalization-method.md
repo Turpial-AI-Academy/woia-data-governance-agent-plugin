@@ -101,7 +101,7 @@ Cada acceso debe comprobar principal autenticado, organización, operación, rec
 
 El control debe ocurrir en el servidor o proveedor determinista, antes de entregar datos al agente o modelo. Ocultar datos en la respuesta final no corrige una lectura indebida previa. Un ID difícil de adivinar tampoco autoriza a utilizarlo.
 
-La cobertura incluye pantallas, herramientas de agentes, procesos diferidos, importaciones, búsquedas, vistas, exportaciones y archivos. La política debe poder expresar relaciones y contexto además de roles generales. [T6] [W6]
+La cobertura incluye pantallas, herramientas de agentes, procesos diferidos, importaciones, búsquedas, vistas, exportaciones y archivos. La política debe poder expresar relaciones y contexto además de roles generales. [T6] []
 
 **Ejemplo de aceptación:** una persona autorizada para gestionar una visita accede a los datos necesarios del inmueble y del contacto, conservando las restricciones sobre cuentas bancarias, garantías y expedientes laborales.
 
@@ -111,7 +111,7 @@ Se deben separar las funciones de ejecución ordinaria, migración, administraci
 
 Los accesos a la base se limitan a componentes y redes autorizados. Las conexiones remotas usan cifrado de transporte y verifican el certificado del servidor. Los componentes, extensiones y mecanismos de autenticación deben tener una política de actualización y revisión aplicable a la versión desplegada. [T7]
 
-Tener acceso técnico a la base, instalar un plugin o pertenecer a Data no concede facultades para aceptar un pago, cambiar un beneficiario o eliminar evidencia retenida. Los comandos deben volver a comprobar la autoridad de negocio correspondiente. [W6]
+Tener acceso técnico a la base, instalar un plugin o pertenecer a Data no concede facultades para aceptar un pago, cambiar un beneficiario o eliminar evidencia retenida. Los comandos deben volver a comprobar la autoridad de negocio correspondiente. []
 
 ### 8.3 Consultas e instrucciones de agentes
 
@@ -135,7 +135,7 @@ La evidencia de cambios debe identificar actor, operación, recurso, alcance, mo
 
 Los logs deben minimizar contenido: no registrar tokens, contraseñas, cadenas de conexión, documentos completos ni datos bancarios íntegros por defecto. Su acceso y alteración deben estar controlados; también deben contemplarse fallos y manipulación de entradas de log. [T10]
 
-Legal / Compliance define las obligaciones aplicables de conservación y restricción. Data las traduce a categorías y reglas; Technology y Software instrumentan su cumplimiento. La política debe abarcar derivados, búsquedas, exportaciones y copias, incluidos los plazos y procedimientos que correspondan a backups. No se impone retención indefinida ni eliminación de evidencia sujeta a una restricción vigente. [W3]
+Legal / Compliance define las obligaciones aplicables de conservación y restricción. Data las traduce a categorías y reglas; Technology y Software instrumentan su cumplimiento. La política debe abarcar derivados, búsquedas, exportaciones y copias, incluidos los plazos y procedimientos que correspondan a backups. No se impone retención indefinida ni eliminación de evidencia sujeta a una restricción vigente. []
 
 ### 8.6 Revocación y accesos diferidos
 
@@ -184,7 +184,7 @@ Se permiten representaciones de lectura derivadas cuando exista una necesidad de
 
 Las decisiones que exijan información vigente —permisos, disponibilidad de fondos o un compromiso incompatible— deben verificarla en la fuente o mecanismo adecuado antes del efecto.
 
-Los KPIs conservan su responsable de negocio. Data garantiza fuentes, dimensiones y reproducción de resultados; no crea una segunda autoridad sobre qué mide cada departamento. [W3]
+Los KPIs conservan su responsable de negocio. Data garantiza fuentes, dimensiones y reproducción de resultados; no crea una segunda autoridad sobre qué mide cada departamento. []
 
 ### 10.4 Réplicas, particiones y distribución
 
@@ -204,7 +204,7 @@ Cada incorporación debe identificar origen, alcance, versión, permisos, corres
 
 La comparación debe incluir conteos por alcance, identidades, relaciones, duplicados, valores ausentes y totales pertinentes. En dinero, se concilian posiciones e importes por moneda, período y titularidad; un total global coincidente no demuestra correspondencia correcta.
 
-Antes de transferir la autoridad de escritura, se debe aceptar el corte efectivo, un único escritor para ese alcance y el tratamiento de entradas tardías y correcciones. Se evita la sincronización bidireccional ilimitada donde simplemente gana el último cambio. [W2]
+Antes de transferir la autoridad de escritura, se debe aceptar el corte efectivo, un único escritor para ese alcance y el tratamiento de entradas tardías y correcciones. Se evita la sincronización bidireccional ilimitada donde simplemente gana el último cambio. []
 
 ### 11.2 Evolución del esquema
 
@@ -229,6 +229,6 @@ Technology y Data deben acordar con el negocio:
 
 Una réplica no reemplaza la estrategia de respaldo. La copia debe poder recuperarse aun frente al tipo de incidente que pretende cubrir.
 
-La aceptación requiere un ejercicio de restauración aislado y verificable. Se comprueban identidades, relaciones, restricciones, importes, documentos, versiones y permisos. Las revocaciones vigentes y los efectos externos se concilian antes de reactivar ejecución. Un respaldo creado correctamente no demuestra que esa recuperación haya funcionado. [W9]
+La aceptación requiere un ejercicio de restauración aislado y verificable. Se comprueban identidades, relaciones, restricciones, importes, documentos, versiones y permisos. Las revocaciones vigentes y los efectos externos se concilian antes de reactivar ejecución. Un respaldo creado correctamente no demuestra que esa recuperación haya funcionado. []
 
 Si varias organizaciones comparten infraestructura, recuperar datos de una no debe exponer o sobrescribir los de otra. El mecanismo de recuperación selectiva, cuando sea necesario, debe diseñarse y probarse con ese límite.

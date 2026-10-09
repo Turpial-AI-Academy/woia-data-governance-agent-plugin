@@ -35,7 +35,7 @@ No unlimited bidirectional last-write-wins synchronization is supported.
 - Authenticate principal and organization before retrieval.
 - Resolve field/resource/purpose access before model processing.
 - Mutation commands enforce current authority and expected revision.
-- Cross-organization FK/reference creation is denied unless a separately authorized cross-org contract explicitly exists; none is part of v0.5.0.
+- Cross-organization FK/reference creation is denied unless a separately authorized cross-org contract explicitly exists; none is part of v0.5.6.
 - Administrative/migration/backup roles are separate from ordinary runtime roles.
 - Secrets are references, never canonical business data or prompt content.
 - Historical/current authorization are separate: a historical document may remain readable only under current permitted access.

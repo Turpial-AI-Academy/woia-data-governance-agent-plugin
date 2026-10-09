@@ -1,7 +1,7 @@
 {
   "schema": "dev.woia.action-contract/v1",
   "plugin": "woia-data-governance",
-  "version": "0.5.0",
+  "version": "0.5.6",
   "actions": [
     "data.contract.resolve",
     "data.contract.review",
