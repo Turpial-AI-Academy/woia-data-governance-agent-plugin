@@ -1,6 +1,5 @@
 # Accepted focused source contract
 
-Source: Turpial-AI-Academy/woia-real-estate @ eb0a7278188b2f9968e21ed4299f08184d864cac / docs/24-authority-finance-final-contract.md
 
 ## 2. Authority planes
 
@@ -17,7 +16,7 @@ Core owns generic:
 - current revision checks;
 - no-authority-from-wake/request/install/access semantics.
 
-B4 organization resource resolution supplies versioned organization policy references without copying private truth into Projects.
+Organization resource resolution supplies versioned organization policy references without copying private truth into Projects.
 
 ### 2.2 Organization policy plane
 
@@ -121,11 +120,11 @@ A batch approval cannot authorize future members of a query.
 
 ## 13. Persistence without a new Authority plugin
 
-Authority control data is separated from B3 canonical business facts:
+Authority control data is separated from canonical business facts:
 
 - Core's AuthorityContext/Effect records carry Task/runtime grant/effect identity;
 - organization configuration holds current policies/delegations/limits/approval resources;
 - providers persist their domain financial/business facts;
 - approval/evidence references are linked into Effect/domain records.
 
-Therefore Authority/Finance reconciliation creates **no new plugin/repository identity** before B5.
+Therefore Authority/Finance reconciliation creates **no new plugin/repository identity**.

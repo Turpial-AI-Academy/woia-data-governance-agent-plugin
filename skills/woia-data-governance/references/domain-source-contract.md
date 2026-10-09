@@ -1,6 +1,5 @@
 # Accepted focused source contract
 
-Source: Turpial-AI-Academy/woia-real-estate @ eb0a7278188b2f9968e21ed4299f08184d864cac / docs/22-canonical-domain-data-contract.md
 
 ### Map completeness rule
 

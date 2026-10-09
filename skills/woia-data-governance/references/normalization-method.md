@@ -1,6 +1,5 @@
 # Accepted focused source contract
 
-Source: Turpial-AI-Academy/woia-real-estate @ eb0a7278188b2f9968e21ed4299f08184d864cac / docs/19-data-normalization-and-quality-standard.md
 
 Generic method resources extracted from the accepted standard. Mandatory 5NF is domain-contract dependent; Real Estate strict semantics and 85 relations remain in woia-re-domain-contracts. No universal schema/backend is prescribed.
 

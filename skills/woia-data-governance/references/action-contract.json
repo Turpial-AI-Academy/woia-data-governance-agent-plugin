@@ -19,7 +19,6 @@
     "data.integrity.issue.record",
     "data.integrity.issue.resolve"
   ],
-  "source_commit": "eb0a7278188b2f9968e21ed4299f08184d864cac",
   "organization_values": "REQUIRED_WHERE_APPLICABLE_NO_DEFAULTS",
   "effects": "NONE_IN_LOCAL_HELPERS"
 }
