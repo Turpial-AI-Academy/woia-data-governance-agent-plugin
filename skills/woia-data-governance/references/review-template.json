@@ -1,4 +1,9 @@
 {
+  "org_id": null,
+  "scope": null,
+  "task_ref": null,
+  "purpose": null,
+  "relation": null,
   "fact_grain": null,
   "attributes": [],
   "candidate_keys": [],
@@ -6,9 +11,16 @@
   "multivalued_dependencies": [],
   "join_dependencies": [],
   "source_authority": null,
-  "proof_evidence_refs": [],
-  "lossless_decomposition_proof": null,
-  "dependency_preservation_proof": null,
+  "proofs": {
+    "1NF": {"evidence_ref": null, "atomic": null},
+    "2NF": {"evidence_ref": null, "partial_dependencies": null},
+    "3NF": {"evidence_ref": null, "transitive_dependencies": null},
+    "BCNF": {"evidence_ref": null, "every_determinant_is_superkey": null},
+    "4NF": {"evidence_ref": null, "independent_multivalued_dependencies": null},
+    "5NF": {"evidence_ref": null, "join_dependencies_implied_by_keys": null}
+  },
+  "lossless_reconstruction_evidence": null,
+  "enforceability_evidence": null,
   "security_isolation_evidence": null,
   "physical_enforcement": "NOT_RUN"
 }

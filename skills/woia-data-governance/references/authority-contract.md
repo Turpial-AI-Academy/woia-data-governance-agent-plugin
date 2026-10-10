@@ -21,7 +21,7 @@ Organization resource resolution supplies versioned organization policy referenc
 ### 2.2 Organization policy plane
 
 Private organization configuration supplies versioned:
-- Mandate/represented-principal powers;
+- represented-principal powers and current delegation;
 - role/delegation grants;
 - financial per-effect and aggregate limits;
 - allowed confirmation modes;
@@ -49,9 +49,9 @@ Before dispatch/mutation, verify all applicable dimensions:
 | department | effective executing department matches operation contract |
 | capability | exact admitted provider and operation |
 | effect | exact effect class and stable business/effect key |
-| represented principal | current Mandate/power/delegation when applicable |
+| represented principal | current representation/power/delegation when applicable |
 | organization policy | exact policy version/digest and effective interval |
-| target | exact Property/Lease/Charge/Payment/Document/etc. scope |
+| target | exact typed resource, fields and operation scope |
 | counterparty/recipient | exact Subject/ContactPoint/beneficiary/vendor |
 | money | exact amount, currency, fees, custody, beneficiary/account and aggregate limits |
 | source | current Source Authority Map, freshness and conflict state |
@@ -72,16 +72,11 @@ Any material mismatch returns a precise blocker or denial. It never falls back t
 
 ## 5. Protected human boundaries
 
-### Always human-led in the initial product
+### Accepted policy boundaries
 
-- commercial Negotiation;
-- Offer creation/transmission/acceptance as a commercial commitment;
-- exception/waiver/concession that changes accepted economic obligation unless already explicitly approved as a fixed exact action;
-- legal/professional applicability and external professional acts;
-- grant/delegation creation or enlargement;
-- exceptional beneficiary/account substitution.
+The current accepted organization/domain policy identifies protected decisions and competent approving principals. Resolve its exact version, digest, scope and validity at dispatch. Missing policy, held or revoked grants, mismatched targets and unapproved material effects fail closed. A model cannot invent policy or enlarge a grant.
 
-AI may prepare, compare, summarize and persist attributable human decisions.
+AI may prepare, compare, summarize and persist attributable competent decisions within its existing authority.
 
 ### Approval is not transport
 
@@ -91,7 +86,7 @@ Core receiver acceptance and result return remain autonomous work mechanics. The
 
 Only Customer Service executes agent-generated external-person communication.
 
-A Finance/Sales/Legal/Property Management approval never implicitly grants another department permission to send the resulting message.
+Approval by a competent business owner never implicitly grants another department permission to send the resulting message.
 
 Each outward communication has its own recipient/purpose/content/channel guard.
 

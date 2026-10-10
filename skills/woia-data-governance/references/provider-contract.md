@@ -19,6 +19,6 @@
 
 **Consumers:** Data. Other departments request Data only for a genuine governance outcome.
 
-**Resources:** generic Data method, 1NF–5NF/BCNF review templates, security/integrity/quality/migration evaluations. Organization values live in private versioned resources; Real Estate semantics live in `woia-re-domain-contracts`.
+**Resources:** generic Data method, 1NF–5NF/BCNF review templates, security/integrity/quality/migration evaluations. Organization values and relation-specific requirements resolve from current accepted versioned resources; the host binds their identity, revision and digest to the exact Task/purpose.
 
 **Boundary:** no universal backend, no routine-read proxy, no authority to accept Finance/Legal/business facts.

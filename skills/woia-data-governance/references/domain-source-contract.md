@@ -18,7 +18,7 @@ Each bounded source migration uses a stable `migration_id` and `cutover_id`.
 2. **Stage:** ingest immutable source observations with source IDs/times; no authority change.
 3. **Map:** deterministic field/entity mapping version; rejected/unknown values remain explicit.
 4. **Identity resolution:** exact external refs first; ambiguous candidates quarantine, never auto-merge consequential identities.
-5. **Validate:** domains/keys/FKs/5NF relation rules and access classification.
+5. **Validate:** domains/keys/FKs, relation rules through the host-resolved accepted normalization target and access classification.
 6. **Reconcile:** counts by scope, relationships, missing/duplicate refs and financial positions by currency/period/beneficiary/custody/purpose.
 7. **Shadow:** compare without changing writer.
 8. **Freeze old writer for bounded scope** at accepted cutover window.

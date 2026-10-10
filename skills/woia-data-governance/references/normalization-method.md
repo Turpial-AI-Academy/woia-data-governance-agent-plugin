@@ -1,7 +1,7 @@
 # Accepted focused source contract
 
 
-Generic method resources extracted from the accepted standard. Mandatory 5NF is domain-contract dependent; Real Estate strict semantics and 85 relations remain in woia-re-domain-contracts. No universal schema/backend is prescribed.
+Generic method resources extracted from the accepted standard. The immutable target resolved under the [accepted normalization contract](normalization-contract.md) determines cumulative proof obligations for the exact relation. The method supports 1NF through 5NF/BCNF without choosing a target on behalf of the competent source owner.
 
 ## 3. Qué significa cumplir las formas normales
 
@@ -69,7 +69,7 @@ La descomposición es sin pérdida bajo C → B. Sin embargo, la regla AB → C 
 
 ## 6. Ficha obligatoria de revisión de cada relación
 
-La futura documentación de diseño de cada relación canónica de Real Estate debe aportar la siguiente evidencia dentro de los artefactos aplicables de Software, revisada por Data y por el responsable semántico. Esta ficha no crea otra metodología ni otro registro de bloqueadores.
+La documentación de diseño de cada relación revisada debe aportar la siguiente evidencia dentro de los artefactos aplicables de Software, revisada por Data y por el responsable semántico. El objetivo aceptado determina las obligaciones aplicables; esta ficha no crea otra metodología ni otro registro de bloqueadores.
 
 | Campo | Contenido requerido |
 |---|---|
@@ -102,7 +102,7 @@ El control debe ocurrir en el servidor o proveedor determinista, antes de entreg
 
 La cobertura incluye pantallas, herramientas de agentes, procesos diferidos, importaciones, búsquedas, vistas, exportaciones y archivos. La política debe poder expresar relaciones y contexto además de roles generales. [T6] []
 
-**Ejemplo de aceptación:** una persona autorizada para gestionar una visita accede a los datos necesarios del inmueble y del contacto, conservando las restricciones sobre cuentas bancarias, garantías y expedientes laborales.
+**Ejemplo de aceptación:** una persona autorizada para revisar un servicio accede a los recursos y contactos necesarios para ese propósito, conservando las restricciones sobre datos financieros y expedientes privados.
 
 ### 8.2 Identidades técnicas y mínimo privilegio
 
@@ -150,7 +150,7 @@ Cachés, enlaces a archivos, vistas y trabajos pendientes deben conservar los l�
 
 Antes de elegir distribución física o prometer capacidad, se debe acordar un perfil de carga con:
 
-- Cantidad y crecimiento de inmuebles, contratos, personas, operaciones, mensajes y documentos.
+- Cantidad y crecimiento de recursos, acuerdos, personas, operaciones, mensajes y documentos.
 - Concurrencia de usuarios, agentes, importaciones y trabajos diferidos.
 - Consultas críticas y mezcla entre lecturas y escrituras.
 - Latencia objetivo y máximos aceptables para operaciones relevantes.

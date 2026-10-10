@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "woia-data-governance",
-  "version": "0.5.7",
+  "version": "0.5.8",
   "description": "Shared woia-data-governance capability under accepted source and authority contracts.",
   "author": {
     "name": "Turpial AI Academy",

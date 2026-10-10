@@ -1,7 +1,7 @@
 {
   "schema": "dev.woia.provider-manifest/v1",
   "name": "woia-data-governance",
-  "version": "0.5.7",
+  "version": "0.5.8",
   "origin": "native",
   "authoring_profile": "thin",
   "actions": [

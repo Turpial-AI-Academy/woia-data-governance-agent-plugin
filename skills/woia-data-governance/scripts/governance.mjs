@@ -1,14 +1,19 @@
+import { NORMAL_FORMS, resolveNormalizationContract } from './normalization-contract.mjs';
 const assert=(c,m)=>{if(!c)throw new Error(m)};
-export function reviewNormalization(r){
- assert(r.fact_grain&&Array.isArray(r.candidate_keys)&&r.candidate_keys.length&&r.candidate_keys.every(k=>Array.isArray(k)&&k.length),'CANDIDATE_KEYS_REQUIRED');
- assert(['1NF','2NF','3NF','BCNF','4NF','5NF'].every(n=>r.proofs?.[n]?.evidence_ref),'DEPENDENCY_PROOFS_REQUIRED');
+const text=v=>typeof v==='string'&&v.trim().length>0;
+export function reviewNormalization(r,{resolveTrustedContext}={}){
+ const contract=resolveNormalizationContract(r,resolveTrustedContext);
+ const required=NORMAL_FORMS.slice(0,NORMAL_FORMS.indexOf(contract.target)+1);
+ assert(text(r.fact_grain)&&Array.isArray(r.candidate_keys)&&r.candidate_keys.length&&r.candidate_keys.every(k=>Array.isArray(k)&&k.length&&k.every(text)&&new Set(k).size===k.length),'CANDIDATE_KEYS_REQUIRED');
+ assert(required.every(n=>text(r.proofs?.[n]?.evidence_ref)),'DEPENDENCY_PROOFS_REQUIRED');
  assert(r.proofs['1NF'].atomic===true,'NON_ATOMIC');
- assert(r.proofs['2NF'].partial_dependencies===false,'PARTIAL_DEPENDENCY');
- assert(r.proofs['3NF'].transitive_dependencies===false,'TRANSITIVE_DEPENDENCY');
- assert(r.proofs.BCNF.every_determinant_is_superkey===true,'NON_KEY_DETERMINANT');
- assert(r.proofs['4NF'].independent_multivalued_dependencies===false,'MULTIVALUED_DEPENDENCY');
- assert(r.proofs['5NF'].join_dependencies_implied_by_keys===true,'UNPROVEN_JOIN_DEPENDENCY');
- return {relation:r.name,result:'REVIEWED_PROOFS',runtime_enforcement:false};
+ if(required.includes('2NF'))assert(r.proofs['2NF'].partial_dependencies===false,'PARTIAL_DEPENDENCY');
+ if(required.includes('3NF'))assert(r.proofs['3NF'].transitive_dependencies===false,'TRANSITIVE_DEPENDENCY');
+ if(required.includes('BCNF'))assert(r.proofs.BCNF.every_determinant_is_superkey===true,'NON_KEY_DETERMINANT');
+ if(required.includes('4NF'))assert(r.proofs['4NF'].independent_multivalued_dependencies===false,'MULTIVALUED_DEPENDENCY');
+ if(required.includes('5NF'))assert(r.proofs['5NF'].join_dependencies_implied_by_keys===true,'UNPROVEN_JOIN_DEPENDENCY');
+ assert(text(r.lossless_reconstruction_evidence)&&text(r.enforceability_evidence),'SEPARATE_RECONSTRUCTION_ENFORCEABILITY_EVIDENCE_REQUIRED');
+ return {relation:r.relation,target:contract.target,contract,required_proofs:required,result:'REVIEWED_PROOFS',runtime_enforcement:false};
 }
 export function resolveSource(entries,{org_id,scope,at}){
  const t=Date.parse(at);assert(Number.isFinite(t),'INVALID_TIME');
