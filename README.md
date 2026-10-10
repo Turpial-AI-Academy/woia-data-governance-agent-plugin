@@ -1,6 +1,6 @@
 # woia-data-governance
 
-Version 0.5.8. Generic source, normalization, quality and migration review without becoming a business fact writer.
+Version 0.5.9. Generic source, normalization, quality and migration review without becoming a business fact writer.
 
 Portable entry: [Agent Skill](skills/woia-data-governance/SKILL.md).
 
